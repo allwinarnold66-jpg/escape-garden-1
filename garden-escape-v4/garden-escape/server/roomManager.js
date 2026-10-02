@@ -40,4 +40,13 @@ function getRoom(code) {
   return rooms.get((code || '').toUpperCase());
 }
 
-module.exports = { createRoom, getRoom, ROLES, rooms };
+export const roomManager = {
+  createRoom,
+  getRoom,
+  joinRoom, // Ensure all functions used in gameManager are present
+  getSerializedRoom,
+  removePlayer,
+  ROLES,
+  rooms
+};
+
